@@ -1,0 +1,89 @@
+class Assignment:
+    
+    def assi():
+        a = int(input("Choose one of the following options:1,2,3,4)"))
+        if a == 1:
+            print("Enter student grade information")
+            a1 = float(input("Choose one of the following options:1.1,1.2,1.3."))
+            if a1 == 1.1:
+                print("Enter a BIT student information")
+                ID = input("Enter student ID:")
+                Name = input("Enter student name:")
+                marks = list(map(int, input("Enter student assessment marks (separated by comma):").split(",")))
+                result = ((marks[0]*20)/100 ) + ((marks[1]*40)/100) + ((marks[2]*40)/100)
+                if result >= 85:
+                    return ("HD") or ("High Distinction")
+                elif result >= 75:
+                    return ("D") or ("Distinction")
+                elif result >= 65:
+                    return ("C") or ("Credit")
+                elif result >= 50:
+                    return ("P") or ("Pass")
+                elif result >= 45:
+#                     return (F or SE or SA) or (Fail or Supplementary Assessment or Supplementary Exam)
+                    resexam = input("yes / no")
+                    if resexam == "yes":
+                        SE1 = list(map(int, input("Enter student assessment marks (separated by comma):").split(",")))
+                    else:
+                        return ("F or SE or SA") or ("Fail or Supplementary Assessment or Supplementary Exam")
+                college = float(input("Choose one of the following options:1.1,1.2,1.3."))
+                print("1.1 - Enter a BIT student information")
+                print("1.2 - Enter a DIT student information")
+                print("1.3 - Go back to the main menu")
+                if college == 1.1:
+                    bit = input("bit info : ")
+                elif college == 1.2:
+                    dit = input("dit info :")
+                elif college == 1.3:
+                    print("go back main menu")
+                else:
+                    print("invalid option")
+            elif a1 == 1.2:
+                print("Enter a DIT student information")
+                ID = input("Enter student ID:")
+                Name = input("Enter student name:")
+                marks = list(map(int, input("Enter student assessment marks (separated by comma):").split(",")))
+                result = ((marks[0]*20)/100 ) + ((marks[1]*40)/100) + ((marks[2]*40)/100)
+                if result >= 50:
+                    return ("CP") or ("Competent")
+                else:
+                    return ("NYC") or ("Not yet competent")
+                college = float(input("Choose one of the following options:1.1,1.2,1.3."))
+                print("1.1 - Enter a BIT student information")
+                print("1.2 - Enter a DIT student information")
+                print("1.3 - Go back to the main menu")
+                if college == 1.1:
+                    bit = input("bit info : ")
+                elif college == 1.2:
+                    dit = input("dit info :")
+                elif college == 1.3:
+                    print("go back main menu")
+                else:
+                    print("invalid option")
+            elif a1 == 1.3:
+                while a != 1:
+                    pass
+# --------------------------------option first complete----------------------------------------------
+                
+        elif a == 2:
+            print("2.1 – Print all student grade information ascendingly by final mark")
+            print("2.2 – Print all student grade information descendingly by final mark")
+            print("2.3 – Go back to the main menu")
+            a2 = float(input("Choose one of the following options:(2.1,2.2,2.3::)"))
+            if a2 == 2.1:
+                print(ID , Name , marks , result,end='  ')
+            elif a2 == 2.2:
+                print(ID , Name , marks.sort() , result,end='  ')
+            elif a2 == 2.3:
+                while a != 1:
+                    pass
+        elif a == 3:
+            print("average of marks" ,result/3)
+        elif a == 4:
+            exit()
+                
+                    
+                    
+                    
+aaa = Assignment
+aaa.assi()         
